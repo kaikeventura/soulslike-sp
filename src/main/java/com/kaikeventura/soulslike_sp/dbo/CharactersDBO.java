@@ -1,12 +1,17 @@
-package com.kaikeventura.soulslike_sp.jpa;
+package com.kaikeventura.soulslike_sp.dbo;
 
 import jakarta.persistence.*;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
 
 import java.util.ArrayList;
 import java.util.List;
 
 @Entity
 @Table(name = "characters")
+@NoArgsConstructor
+@Setter
 public class CharactersDBO {
 
     @Id
@@ -27,4 +32,10 @@ public class CharactersDBO {
 
     @OneToMany(mappedBy = "charactersDBO", cascade = CascadeType.ALL)
     private List<CharactersItemsDBO> charactersItemsDBOS = new ArrayList<>();
+
+    public CharactersDBO(String name, String bodyType, String clazz) {
+        this.name = name;
+        this.bodyType = bodyType;
+        this.clazz = clazz;
+    }
 }

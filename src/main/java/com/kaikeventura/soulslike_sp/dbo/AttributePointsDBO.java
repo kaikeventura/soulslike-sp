@@ -1,4 +1,4 @@
-package com.kaikeventura.soulslike_sp.jpa;
+package com.kaikeventura.soulslike_sp.dbo;
 
 import jakarta.persistence.*;
 
