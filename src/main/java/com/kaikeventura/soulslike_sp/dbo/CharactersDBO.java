@@ -1,9 +1,9 @@
 package com.kaikeventura.soulslike_sp.dbo;
 
 import jakarta.persistence.*;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import lombok.ToString;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -16,6 +16,7 @@ public class CharactersDBO {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Getter
     private Long id;
 
     @Column(length = 100, nullable = false)
